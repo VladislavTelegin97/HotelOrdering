@@ -1,6 +1,6 @@
 ﻿namespace HotelOrdering
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.buttonAbout = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonSkinEditor = new System.Windows.Forms.Button();
+            this.buttonConfirm = new System.Windows.Forms.Button();
             this.panel41 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.uKRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonStripLanguage = new System.Windows.Forms.ToolStripSplitButton();
+            this.dEUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rUSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.engToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uKRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uKRToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonNextFloor = new System.Windows.Forms.Button();
+            this.buttonPreviousFloor = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,179 +52,138 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(53, 18);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(779, 408);
-            this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(17, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 410);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(832, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 410);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.Controls.Add(this.button26);
-            this.panel2.Controls.Add(this.button25);
-            this.panel2.Controls.Add(this.button24);
-            this.panel2.Controls.Add(this.button23);
-            this.panel2.Location = new System.Drawing.Point(874, 17);
+            this.panel2.Controls.Add(this.buttonAbout);
+            this.panel2.Controls.Add(this.buttonHelp);
+            this.panel2.Controls.Add(this.buttonSkinEditor);
+            this.panel2.Controls.Add(this.buttonConfirm);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 147);
-            this.panel2.TabIndex = 3;
             // 
-            // button26
+            // buttonAbout
             // 
-            this.button26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button26.BackgroundImage")));
-            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button26.Location = new System.Drawing.Point(75, 74);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(70, 70);
-            this.button26.TabIndex = 8;
-            this.button26.Text = " ";
-            this.button26.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonAbout, "buttonAbout");
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // buttonHelp
             // 
-            this.button25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button25.BackgroundImage")));
-            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button25.Location = new System.Drawing.Point(3, 74);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(70, 70);
-            this.button25.TabIndex = 7;
-            this.button25.Text = " ";
-            this.button25.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonHelp, "buttonHelp");
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.UseVisualStyleBackColor = true;
             // 
-            // button24
+            // buttonSkinEditor
             // 
-            this.button24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button24.BackgroundImage")));
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.Location = new System.Drawing.Point(75, 3);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(70, 70);
-            this.button24.TabIndex = 6;
-            this.button24.Text = " ";
-            this.button24.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonSkinEditor, "buttonSkinEditor");
+            this.buttonSkinEditor.Name = "buttonSkinEditor";
+            this.buttonSkinEditor.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // buttonConfirm
             // 
-            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.Location = new System.Drawing.Point(3, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(70, 70);
-            this.button23.TabIndex = 5;
-            this.button23.Text = " ";
-            this.button23.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonConfirm, "buttonConfirm");
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
             // 
             // panel41
             // 
             this.panel41.BackColor = System.Drawing.Color.White;
-            this.panel41.Location = new System.Drawing.Point(874, 170);
+            resources.ApplyResources(this.panel41, "panel41");
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(148, 256);
-            this.panel41.TabIndex = 4;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.AutoSize = false;
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.BackColor = System.Drawing.Color.LightGray;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
-            this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 440);
+            this.buttonStripLanguage});
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(1037, 22);
             this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             // 
-            // toolStripSplitButton1
+            // buttonStripLanguage
             // 
-            this.toolStripSplitButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.toolStripSplitButton1.DropDownButtonWidth = 10;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uKRToolStripMenuItem,
+            resources.ApplyResources(this.buttonStripLanguage, "buttonStripLanguage");
+            this.buttonStripLanguage.DropDownButtonWidth = 10;
+            this.buttonStripLanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dEUToolStripMenuItem,
             this.rUSToolStripMenuItem,
-            this.deuToolStripMenuItem,
-            this.engToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(59, 20);
-            this.toolStripSplitButton1.Text = "RUS";
+            this.uKRToolStripMenuItem,
+            this.uKRToolStripMenuItem1});
+            this.buttonStripLanguage.Image = global::HotelOrdering.Properties.Resources.usa;
+            this.buttonStripLanguage.Name = "buttonStripLanguage";
+            this.buttonStripLanguage.ButtonClick += new System.EventHandler(this.buttonStripLanguage_ButtonClick);
             // 
-            // uKRToolStripMenuItem
+            // dEUToolStripMenuItem
             // 
-            this.uKRToolStripMenuItem.Name = "uKRToolStripMenuItem";
-            this.uKRToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.uKRToolStripMenuItem.Text = "UKR";
+            this.dEUToolStripMenuItem.Image = global::HotelOrdering.Properties.Resources.usa;
+            this.dEUToolStripMenuItem.Name = "dEUToolStripMenuItem";
+            resources.ApplyResources(this.dEUToolStripMenuItem, "dEUToolStripMenuItem");
+            this.dEUToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
             // rUSToolStripMenuItem
             // 
+            this.rUSToolStripMenuItem.Image = global::HotelOrdering.Properties.Resources.deu;
             this.rUSToolStripMenuItem.Name = "rUSToolStripMenuItem";
-            this.rUSToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.rUSToolStripMenuItem.Text = "RUS";
+            resources.ApplyResources(this.rUSToolStripMenuItem, "rUSToolStripMenuItem");
+            this.rUSToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
-            // deuToolStripMenuItem
+            // uKRToolStripMenuItem
             // 
-            this.deuToolStripMenuItem.Name = "deuToolStripMenuItem";
-            this.deuToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.deuToolStripMenuItem.Text = "DEU";
+            this.uKRToolStripMenuItem.Image = global::HotelOrdering.Properties.Resources.rus;
+            this.uKRToolStripMenuItem.Name = "uKRToolStripMenuItem";
+            resources.ApplyResources(this.uKRToolStripMenuItem, "uKRToolStripMenuItem");
+            this.uKRToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
-            // engToolStripMenuItem
+            // uKRToolStripMenuItem1
             // 
-            this.engToolStripMenuItem.Name = "engToolStripMenuItem";
-            this.engToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.engToolStripMenuItem.Text = "ENG";
+            this.uKRToolStripMenuItem1.Image = global::HotelOrdering.Properties.Resources.ukr;
+            this.uKRToolStripMenuItem1.Name = "uKRToolStripMenuItem1";
+            resources.ApplyResources(this.uKRToolStripMenuItem1, "uKRToolStripMenuItem1");
+            this.uKRToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
-            // Form1
+            // buttonNextFloor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.buttonNextFloor.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.buttonNextFloor, "buttonNextFloor");
+            this.buttonNextFloor.Name = "buttonNextFloor";
+            this.buttonNextFloor.UseVisualStyleBackColor = false;
+            this.buttonNextFloor.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonPreviousFloor
+            // 
+            this.buttonPreviousFloor.BackColor = System.Drawing.Color.LightGray;
+            resources.ApplyResources(this.buttonPreviousFloor, "buttonPreviousFloor");
+            this.buttonPreviousFloor.Name = "buttonPreviousFloor";
+            this.buttonPreviousFloor.UseVisualStyleBackColor = false;
+            this.buttonPreviousFloor.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MainForm
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1037, 462);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel41);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonNextFloor);
+            this.Controls.Add(this.buttonPreviousFloor);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Бронирование номера отеля Riviera";
+            this.Name = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveChanges);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
@@ -237,21 +196,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonPreviousFloor;
+        private System.Windows.Forms.Button buttonNextFloor;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonSkinEditor;
+        private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem uKRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSplitButton buttonStripLanguage;
+        private System.Windows.Forms.ToolStripMenuItem dEUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rUSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem engToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uKRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uKRToolStripMenuItem1;
     }
 }
 
