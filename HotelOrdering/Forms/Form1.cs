@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
+using System.Threading;
 using HotelOrdering.Model;
+using System.Globalization;
 
 namespace HotelOrdering
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         #region MAIN_FIELDS
 
@@ -17,7 +20,7 @@ namespace HotelOrdering
 
         #endregion
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -512,10 +515,10 @@ namespace HotelOrdering
         private void ShowFloor(int i)
         {
             this.panel1.Controls.Clear();
-            floorList[i-1].Show(this.panel1);
-            if (currentFloor == floorList.Count) { button1.Enabled = true;  button2.Enabled = false; }
-            else if (currentFloor == 1) { button1.Enabled = false; button2.Enabled = true; }
-            else { button1.Enabled = true; button2.Enabled = true; }
+            floorList[i-1].Show(panel1);
+            if (currentFloor == floorList.Count) { buttonPreviousFloor.Enabled = true;  buttonNextFloor.Enabled = false; }
+            else if (currentFloor == 1) { buttonPreviousFloor.Enabled = false; buttonNextFloor.Enabled = true; }
+            else { buttonPreviousFloor.Enabled = true; buttonNextFloor.Enabled = true; }
         }
 
         private void RoomClickedHandler(object sender, EventArgs e)
@@ -524,13 +527,11 @@ namespace HotelOrdering
             {
                 ((Button)sender).BackColor = Color.White;
                 ((Button)sender).ForeColor = Color.Black;
-                //
             }
             else
             {
                 ((Button)sender).BackColor = Color.Black;
                 ((Button)sender).ForeColor = Color.White;
-                //
             }
         }
 
@@ -541,6 +542,54 @@ namespace HotelOrdering
                 foreach (Button b in f)
                     currentConfig.configList.Add(int.Parse(b.Text), b.BackColor);
             currentConfig.SetConfiguration();
-        } 
+        }
+
+        private void ToolStripMenuItem_Click (object sender, EventArgs e)
+        {
+            const string UKR = "UKR";
+            const string RUS = "RUS";
+            const string DEU = "DEU";
+            const string ENG = "ENG";
+
+            var resources = new ComponentResourceManager(typeof(MainForm));
+
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            CultureInfo cultureInfo = null;
+
+
+            switch (item.Text)
+            {
+                case UKR:
+                    cultureInfo = new CultureInfo("uk-UA");
+                    break;
+                case RUS:
+                    cultureInfo = new CultureInfo("ru-RU");
+                    break;
+                case DEU:
+                    cultureInfo = new CultureInfo("de-DE");
+                    break;
+                case ENG:
+                    cultureInfo = new CultureInfo("en-US");
+                    break;
+            }
+
+            //Changing window's title
+            resources.ApplyResources(this, "$this", cultureInfo);
+            
+            //Applying locale-specified resources
+            foreach (Control c in Controls)
+            {
+                resources.ApplyResources(c, c.Name, cultureInfo);
+            }
+
+
+            buttonStripLanguage.Text = item.Text;
+            buttonStripLanguage.Image = item.Image;
+        }
+
+        private void buttonStripLanguage_ButtonClick (object sender, EventArgs e)
+        {
+            buttonStripLanguage.ShowDropDown();
+        }
     }
 }
