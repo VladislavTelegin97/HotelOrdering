@@ -104,6 +104,45 @@
   <ItemGroup>
     <None Include="Resources\location_flags\ukr.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\color-palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\inf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\sign-down-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\sign-up-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\submit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\user-male-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\sign-down-icon-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\sign-up-icon-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\submit-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons\sign-question-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors\color_bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors\color_gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colors\color_silver.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
